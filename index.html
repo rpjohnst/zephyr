@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Zephyr</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<canvas id="zephyr" width="800" height="600">
+			<p>Please upgrade your browser.</p>
+		</canvas>
+		<script src="http://glmatrix.googlecode.com/files/glMatrix-0.9.5.min.js"></script>
+		<script src="zephyr.js"></script>
+		<script src="shader.js"></script>
+		<script src="square.js"></script>
+		<script>
+			var game = new zephyr.Context(document.getElementById("zephyr"));
+			var square = new zephyr.Square(64, 64, 50, 50);
+			zephyr.start(game, square);
+		</script>
+	</body>
+</html>
