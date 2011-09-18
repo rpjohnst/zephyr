@@ -52,7 +52,7 @@ zephyr.Context = function (canvas) {
 	this.render = function (square) {
 		gl.viewport(0, 0, canvas.width, canvas.height);
 		gl.clear(gl.COLOR_BUFFER_BIT);
-		mat4.ortho(0, canvas.width, canvas.height, 0, -1, 1, projectionMatrix);
+		mat4.ortho(-0.5, canvas.width - 0.5, canvas.height - 0.5, -0.5, -1, 1, projectionMatrix);
 		gl.uniformMatrix4fv(shader.uniforms.projectionMatrix, false, projectionMatrix);
 
 		mat4.identity(modelViewMatrix);
