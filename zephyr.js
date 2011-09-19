@@ -86,16 +86,14 @@ var requestAnimationFrame = (function () {
 	);
 })();
 
-zephyr.start = function (context, square) {
+zephyr.start = function (context, events, square) {
 	var nextFrame = new Date().getTime();
-	var delta = 1000 / 60;
-
-	(function update() {
+	(function update(time) {
 		requestAnimationFrame(update);
 
-		while (new Date().getTime() > nextFrame) {
-			// update
-			nextFrame += delta;
+		while (nextFrame < time) {
+			events.update(square)
+			nextFrame += 1000 / 60;
 		}
 
 		context.render(square);

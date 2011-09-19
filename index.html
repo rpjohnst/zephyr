@@ -11,11 +11,14 @@
 		<script src="http://glmatrix.googlecode.com/files/glMatrix-0.9.5.min.js"></script>
 		<script src="zephyr.js"></script>
 		<script src="shader.js"></script>
+		<script src="events.js"></script>
 		<script src="square.js"></script>
 		<script>
-			var game = new zephyr.Context(document.getElementById("game"));
+			var canvas = document.getElementById("game");
+			var context = new zephyr.Context(canvas);
+			var events = new zephyr.Events(canvas);
 			var square = new zephyr.Square(64, 64, 50, 50);
-			zephyr.start(game, square);
+			zephyr.start(context, events, square);
 		</script>
 	</body>
 </html>
