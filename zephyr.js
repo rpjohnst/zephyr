@@ -42,7 +42,7 @@ zephyr.Context = function (canvas) {
 	gl.enableVertexAttribArray(shader.attributes.vertexColor);
 
 	gl.clearColor(0, 0, 0, 1);
-	
+
 	var projectionMatrix = mat4.create();
 	var modelViewMatrix = mat4.create();
 

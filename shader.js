@@ -3,7 +3,7 @@ zephyr.shaders = {
 		vertex: [
 			"attribute vec3 vertexPosition;",
 			"attribute vec4 vertexColor;",
-			
+
 			"uniform mat4 projectionMatrix;",
 			"uniform mat4 modelViewMatrix;",
 
